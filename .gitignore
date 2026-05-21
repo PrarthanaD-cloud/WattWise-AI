@@ -5,3 +5,7 @@ dist/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# Firebase files
+client/src/firebase.js
+client/public/firebase-messaging-sw.js
