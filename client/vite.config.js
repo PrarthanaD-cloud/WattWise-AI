@@ -13,7 +13,7 @@ export default defineConfig({
       "/api": {
 
         target:
-          "http://localhost:5000",
+          "https://wattwise-backend-ut6d.onrender.com",
 
         changeOrigin: true,
 
