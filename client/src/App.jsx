@@ -361,17 +361,12 @@ useEffect(() => {
     try {
 
       await axios.post(
-        "https://wattwise-backend-ut6d.onrender.com/api/devices",
-        {
-
-          name: deviceName,
-
-          usage: Number(
-            deviceUsage
-          ),
-
-        }
-      );
+"https://wattwise-backend-ut6d.onrender.com/api/devices",
+{
+ name: deviceName,
+ usage: Number(deviceUsage),
+}
+);
 
       setDeviceName("");
 
