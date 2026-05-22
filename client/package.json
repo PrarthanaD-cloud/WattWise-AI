@@ -1,14 +1,15 @@
 {
   "name": "client",
   "private": true,
-  "proxy":"https://wattwise-backend-ut6d.onrender.com",
   "version": "0.0.0",
   "type": "module",
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
+
   "dependencies": {
     "axios": "^1.16.1",
     "firebase": "^12.13.0",
@@ -20,6 +21,7 @@
     "react-toastify": "^11.1.0",
     "recharts": "^3.8.1"
   },
+
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.12",
     "@vitejs/plugin-react": "^5.0.0",
