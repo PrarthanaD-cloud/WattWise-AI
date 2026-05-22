@@ -417,8 +417,8 @@ useEffect(() => {
     id
   ) => {
 
-    await axios.get(
-"https://wattwise-backend-ut6d.onrender.com/api/devices"
+    await axios.delete(
+`https://wattwise-backend-ut6d.onrender.com/api/devices/${id}`
 );
 
     fetchDevices();
