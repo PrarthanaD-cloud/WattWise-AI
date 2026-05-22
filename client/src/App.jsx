@@ -127,8 +127,8 @@ useEffect(() => {
 
       const response =
         await axios.get(
-          "https://wattwise-backend-ut6d.onrender.com"
-        );
+"https://wattwise-backend-ut6d.onrender.com/api/devices"
+);
 
       setDevices(response.data);
 
@@ -361,7 +361,7 @@ useEffect(() => {
     try {
 
       await axios.post(
-        "https://wattwise-backend-ut6d.onrender.com",
+        "https://wattwise-backend-ut6d.onrender.com/api/devices",
         {
 
           name: deviceName,
@@ -417,9 +417,9 @@ useEffect(() => {
     id
   ) => {
 
-    await axios.delete(
-      `https://wattwise-backend-ut6d.onrender.com`
-    );
+    await axios.get(
+"https://wattwise-backend-ut6d.onrender.com/api/devices"
+);
 
     fetchDevices();
 
