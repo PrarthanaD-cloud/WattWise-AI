@@ -360,7 +360,7 @@ useEffect(() => {
 
     try {
 
-      await axios.post(
+    await axios.post(
 "https://wattwise-backend-ut6d.onrender.com/api/devices",
 {
  name: deviceName,
@@ -412,7 +412,7 @@ useEffect(() => {
     id
   ) => {
 
-    await axios.delete(
+  await axios.delete(
 `https://wattwise-backend-ut6d.onrender.com/api/devices/${id}`
 );
 
