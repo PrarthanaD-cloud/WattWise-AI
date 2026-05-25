@@ -5,7 +5,6 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-
 app.use(cors());
 app.use(express.json());
 
@@ -39,15 +38,17 @@ app.get(
 "/api/devices",
 async(req,res)=>{
 
- try{
+const devices=
+await Device.find({
 
- const devices =
- await Device.find({
+email:
+req.query.email
 
- email:
- req.query.email
+});
 
- });
+res.json(devices);
+
+});
 
  res.json(devices);
 
@@ -67,29 +68,27 @@ app.post(
 "/api/devices",
 async(req,res)=>{
 
- try{
+const device=
+new Device({
 
- const device =
- new Device({
+email:
+req.body.email,
 
- email:
- req.body.email,
+name:
+req.body.name,
 
- name:
- req.body.name,
+usage:
+req.body.usage
 
- usage:
- req.body.usage
+});
 
- });
+await device.save();
 
- await device.save();
+res.json({
+success:true
+});
 
- res.json({
-
- success:true
-
- });
+});
 
  }
 

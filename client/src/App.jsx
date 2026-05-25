@@ -117,7 +117,6 @@ useEffect(() => {
   // ======================
   // FETCH DEVICES
   // ======================
-
 useEffect(()=>{
 
 if(loggedIn){
@@ -125,8 +124,6 @@ if(loggedIn){
 fetchDevices();
 
 }
-
-Notification.requestPermission();
 
 },[loggedIn,email]);
 
@@ -137,7 +134,7 @@ Notification.requestPermission();
   try {
 
     const response =
-      await axios.get(
+      axios.get(
 
 `https://wattwise-backend-ut6d.onrender.com/api/devices?email=${email}`
 
@@ -186,11 +183,10 @@ Notification.requestPermission();
   // LOGIN
   // ======================
 
-  const login = async () => {
+const login = async () => {
 
  try{
 
-   const userCredential =
    await signInWithEmailAndPassword(
 
      auth,
@@ -202,10 +198,11 @@ Notification.requestPermission();
    setLoggedIn(true);
 
  }
+
  catch(error){
 
    alert(
-     "Invalid Email or Password"
+    "Invalid Email Or Password"
    );
 
  }
