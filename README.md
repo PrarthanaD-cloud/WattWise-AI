@@ -1,4 +1,4 @@
-# ⚡ WattWise AI – Smart Energy Optimization Dashboard
+# WattWise AI – Smart Energy Optimization Dashboard
 
 A full-stack AI-powered Smart Energy Optimization Dashboard designed to help users monitor electricity usage, optimize energy consumption intelligently, and receive smart recommendations to reduce power usage.
 
@@ -6,26 +6,26 @@ WattWise AI provides real-time analytics, AI-driven optimization, notification a
 
 ---
 
-## 🚀 Live Demo
+## Live Demo
 
-🔗 https://watt-wise-ai.vercel.app
+ https://watt-wise-ai.vercel.app
 
 ---
 
-## ✨ Features
+##  Features
 
-### 🔐 Authentication System
+### Authentication System
 - User Login Interface
 - Session-based access
 - Clean and responsive login page
 
-### ⚡ Smart Device Energy Monitoring
+### Smart Device Energy Monitoring
 - Add devices dynamically
 - Delete devices instantly
 - Monitor individual device usage
 - Real-time device tracking
 
-### 📊 Analytics Dashboard
+### Analytics Dashboard
 - Energy usage visualization
 - Interactive Bar Charts
 - Pie Chart Analytics
@@ -33,33 +33,33 @@ WattWise AI provides real-time analytics, AI-driven optimization, notification a
 - Energy savings calculation
 - Peak usage time prediction
 
-### 🤖 AI Optimization Engine
+### AI Optimization Engine
 - Automatically detects highest energy-consuming device
 - AI reduces highest usage device consumption by optimized percentage
 - Smart AI recommendation generation
 - Optimized energy usage visualization
 
-### 🔔 Smart Notifications
+### Smart Notifications
 - Firebase Cloud Messaging integration
 - Browser notification support
 - User permission-based alerts
 - Real-time notification delivery
 
-### 🌙 UI Features
+### UI Features
 - Dark Mode
 - Light Mode
 - Fully Responsive UI
 - Mobile Friendly Design
 - Smooth user experience
 
-### ☁ Cloud Deployment
+### Cloud Deployment
 - Frontend deployed on Vercel
 - Backend deployed on Render
 - MongoDB Atlas Cloud Database
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 ### Frontend
 - React.js
@@ -85,7 +85,7 @@ WattWise AI provides real-time analytics, AI-driven optimization, notification a
 
 ---
 
-## 🧠 AI Optimization Workflow
+## AI Optimization Workflow
 
 WattWise AI intelligently:
 
@@ -98,7 +98,7 @@ WattWise AI intelligently:
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 WattWise-AI/
@@ -120,7 +120,7 @@ WattWise-AI/
 
 ---
 
-## ⚙ Installation
+## Installation
 
 ### Clone Repository
 
@@ -160,7 +160,7 @@ npm start
 
 ---
 
-## 🔐 Environment Variables
+## Environment Variables
 
 Create `.env` inside server folder:
 
@@ -172,7 +172,7 @@ PORT=5000
 
 ---
 
-## 🔔 Firebase Setup
+## Firebase Setup
 
 1. Create Firebase Project
 2. Enable Cloud Messaging
@@ -182,7 +182,7 @@ PORT=5000
 
 ---
 
-## 📈 Future Improvements
+## Future Improvements
 
 - Smart scheduling system
 - Energy prediction using Machine Learning
@@ -195,9 +195,9 @@ PORT=5000
 
 ---
 
-## 👩‍💻 Developed By
+## Developed By
 
-**Prarthana S**
+**Prarthana D**
 
 Computer Science Engineering Student
 
@@ -205,7 +205,7 @@ Passionate about AI, Full Stack Development, and Smart Energy Solutions.
 
 ---
 
-## ⭐ Support
+## Support
 
 If you like this project:
 
@@ -217,7 +217,7 @@ If you like this project:
 
 ---
 
-## 📜 License
+## License
 
 This project is developed for educational and innovation purposes.
 
