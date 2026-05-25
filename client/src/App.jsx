@@ -152,7 +152,7 @@ useEffect(() => {
         messaging,
         {
           vapidKey:
-            "BOzh7bUxa2ln-B93tgl77h8tK-wLy1IA4PMvWqrnffv7N0uXSpCG_6zOhmfGg4OuPwxqIjXpAFI2YUZE99S1MOA",
+            "BF8LNDwYFyp234jxBGHKu8n6Q7ivaM8tWJs8qgI5_LdockfS48adGoPVGk0tfdbTTlqXeYVRm8ZzJNlgd7E2sVs",
         }
       );
 
