@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBVF9DvBKe5C77QhPcRptOr_GPpsLV0gww",
-  authDomain: "wattwise-8f055.firebaseapp.com",
-  projectId: "wattwise-8f055",
-  storageBucket: "wattwise-8f055.firebasestorage.app",
-  messagingSenderId: "823885543363",
-  appId: "1:823885543363:web:4de9856723d6859187ef76",
-  measurementId: "G-C26XWN4PQR"
+  apiKey: "AIzaSyAND34JpxB7R9KlG343jNBM6JwXD2YQnes",
+  authDomain: "wattwise-c6ebf.firebaseapp.com",
+  projectId: "wattwise-c6ebf",
+  storageBucket: "wattwise-c6ebf.firebasestorage.app",
+  messagingSenderId: "404446714715",
+  appId: "1:404446714715:web:f67b39d4c8b370500f987e",
+  measurementId: "G-GDC9JSR1K0"
 };
 
 const app = initializeApp(firebaseConfig);
