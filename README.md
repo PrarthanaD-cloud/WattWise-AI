@@ -1,190 +1,228 @@
-# WattWise AI – Smart Energy Management Dashboard
+# ⚡ WattWise AI – Smart Energy Optimization Dashboard
 
-WattWise AI is an intelligent energy monitoring and optimization platform designed to help users track electricity consumption, analyze usage patterns, and receive AI-driven optimization suggestions for efficient energy management.
+A full-stack AI-powered Smart Energy Optimization Dashboard designed to help users monitor electricity usage, optimize energy consumption intelligently, and receive smart recommendations to reduce power usage.
 
-The application provides real-time energy analytics, device monitoring, usage visualization, notifications, and AI-based recommendations to improve power efficiency.
-
----
-
-## Features
-
-### User Authentication
-- Secure Login Page
-- User session management
-- Personalized dashboard access
-
-### Energy Analytics
-- Interactive Graphs
-- Pie Charts for energy distribution
-- Device-wise energy monitoring
-- Total energy usage calculation
-- Monthly electricity cost estimation
-- Savings tracking
-
-### AI Optimization
-- Automatically identifies highest energy consuming device
-- AI-driven optimization recommendations
-- Reduces highest usage device consumption virtually
-- Energy efficiency improvement suggestions
-
-### Smart Device Management
-- Add devices
-- Delete devices
-- Device-wise usage monitoring
-- Highest usage device detection
-- Peak usage time analysis
-
-### Notifications
-- Usage alert notifications
-- Energy threshold warnings
-- Device activity alerts
-
-### User Experience
-- Dark Mode / Light Mode
-- Responsive UI
-- Mobile-friendly design
-- Clean dashboard interface
-
-### Backend Integration
-- MongoDB Database
-- REST API Backend
-- Device data persistence
-- Stable data synchronization
+WattWise AI provides real-time analytics, AI-driven optimization, notification alerts, device monitoring, and an interactive dashboard experience.
 
 ---
 
-## Tech Stack
+## 🚀 Live Demo
+
+🔗 https://watt-wise-ai.vercel.app
+
+---
+
+## ✨ Features
+
+### 🔐 Authentication System
+- User Login Interface
+- Session-based access
+- Clean and responsive login page
+
+### ⚡ Smart Device Energy Monitoring
+- Add devices dynamically
+- Delete devices instantly
+- Monitor individual device usage
+- Real-time device tracking
+
+### 📊 Analytics Dashboard
+- Energy usage visualization
+- Interactive Bar Charts
+- Pie Chart Analytics
+- Monthly energy cost estimation
+- Energy savings calculation
+- Peak usage time prediction
+
+### 🤖 AI Optimization Engine
+- Automatically detects highest energy-consuming device
+- AI reduces highest usage device consumption by optimized percentage
+- Smart AI recommendation generation
+- Optimized energy usage visualization
+
+### 🔔 Smart Notifications
+- Firebase Cloud Messaging integration
+- Browser notification support
+- User permission-based alerts
+- Real-time notification delivery
+
+### 🌙 UI Features
+- Dark Mode
+- Light Mode
+- Fully Responsive UI
+- Mobile Friendly Design
+- Smooth user experience
+
+### ☁ Cloud Deployment
+- Frontend deployed on Vercel
+- Backend deployed on Render
+- MongoDB Atlas Cloud Database
+
+---
+
+## 🛠 Tech Stack
 
 ### Frontend
 - React.js
-- Tailwind CSS
+- Vite
 - Axios
 - Recharts
+- Firebase Messaging
+- Tailwind CSS
 
 ### Backend
 - Node.js
 - Express.js
-
-### Database
 - MongoDB Atlas
+- Mongoose
 
-### Authentication
-- Firebase Authentication
+### Deployment Platforms
+- Vercel (Frontend)
+- Render (Backend)
 
 ### Additional Services
 - Firebase Cloud Messaging
-- AI Optimization Logic
+- MongoDB Atlas
 
 ---
 
-## Project Structure
+## 🧠 AI Optimization Workflow
+
+WattWise AI intelligently:
+
+1. Detects highest energy-consuming device
+2. Applies optimization logic
+3. Reduces excessive usage automatically
+4. Calculates optimized total consumption
+5. Generates AI recommendations
+6. Displays savings analytics
+
+---
+
+## 📂 Project Structure
 
 ```
-WATTWISE-AI/
+WattWise-AI/
 │
 ├── client/
-│ ├── public/
-│ ├── src/
-│ ├── App.jsx
-│ └── package.json
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── firebase.js
+│   │
+│   ├── public/
+│   │   └── firebase-messaging-sw.js
 │
 ├── server/
-│ ├── models/
-│ ├── routes/
-│ ├── server.js
-│ └── package.json
+│   ├── server.js
+│   └── .env
 │
 └── README.md
 ```
 
 ---
 
-## Installation
+## ⚙ Installation
 
 ### Clone Repository
 
 ```bash
-git clone YOUR_REPOSITORY_LINK
+git clone https://github.com/PrarthanaD-cloud/WattWise-AI.git
 ```
 
-### Navigate to project
+Move into project:
 
 ```bash
 cd WattWise-AI
 ```
 
-### Install Frontend Dependencies
+---
+
+### Frontend Setup
 
 ```bash
 cd client
-npm install
-```
 
-### Install Backend Dependencies
-
-```bash
-cd ../server
 npm install
+
+npm run dev
 ```
 
 ---
 
-## Run Application
-
-### Start Backend
+### Backend Setup
 
 ```bash
 cd server
-npm run dev
-```
 
-### Start Frontend
+npm install
 
-```bash
-cd client
-npm run dev
-```
-
-Frontend:
-
-```
-http://localhost:5173
-```
-
-Backend:
-
-```
-http://localhost:5000
+npm start
 ```
 
 ---
 
-## Future Enhancements
+## 🔐 Environment Variables
 
-- Smart IoT Device Integration
-- Real-Time Energy Monitoring
-- AI Predictive Energy Analytics
-- Advanced Notification System
-- Energy Consumption Forecasting
-- Multi-user Dashboard Support
+Create `.env` inside server folder:
+
+```env
+MONGO_URI=your_mongodb_connection_string
+
+PORT=5000
+```
 
 ---
 
-## Developed By
+## 🔔 Firebase Setup
 
-### Prarthana D
+1. Create Firebase Project
+2. Enable Cloud Messaging
+3. Generate VAPID Key
+4. Add Firebase configuration
+5. Enable browser notifications
+
+---
+
+## 📈 Future Improvements
+
+- Smart scheduling system
+- Energy prediction using Machine Learning
+- Device categorization
+- User profile management
+- Email alert integration
+- Weekly energy reports
+- Multi-user support
+- IoT device integration
+
+---
+
+## 👩‍💻 Developed By
+
+**Prarthana S**
 
 Computer Science Engineering Student
 
-Project: **WattWise AI – Smart Energy Management Dashboard**
+Passionate about AI, Full Stack Development, and Smart Energy Solutions.
 
 ---
 
-## License
+## ⭐ Support
 
-This project is developed for educational and learning purposes.
+If you like this project:
+
+⭐ Star this repository
+
+⭐ Share feedback
+
+⭐ Contribute improvements
 
 ---
 
-⭐ If you like this project, consider giving it a star.
-Deployment Fix
+## 📜 License
+
+This project is developed for educational and innovation purposes.
+
+---
+
+### ⚡ WattWise AI
+
+"Smarter Energy. Smarter Future."
