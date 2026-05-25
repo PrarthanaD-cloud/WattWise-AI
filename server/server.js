@@ -9,25 +9,26 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ======================
 // DATABASE
-// ======================
 
 mongoose.connect(process.env.MONGO_URI)
 .then(() => {
   console.log("MongoDB Connected");
 })
-.catch((err) => {
+.catch((err)=>{
   console.log(err);
 });
 
-// ======================
 // MODEL
-// ======================
 
 const DeviceSchema = new mongoose.Schema({
-  name: String,
-  usage: Number,
+
+  email:String,
+
+  name:String,
+
+  usage:Number,
+
 });
 
 const Device = mongoose.model(
@@ -35,76 +36,112 @@ const Device = mongoose.model(
   DeviceSchema
 );
 
-// ======================
-// ROUTES
-// ======================
-
 // GET DEVICES
 
-app.get("/api/devices", async (req, res) => {
+app.get(
+"/api/devices",
+async(req,res)=>{
 
-  const devices = await Device.find();
+try{
 
-  res.json(devices);
+const devices=
+await Device.find({
+
+email:req.query.email
 
 });
+
+res.json(devices);
+
+}
+catch(error){
+
+res.status(500).json(error);
+
+}
+
+}
+);
 
 // ADD DEVICE
 
-app.post("/api/devices", async (req, res) => {
+app.post(
+"/api/devices",
+async(req,res)=>{
 
-  try {
+try{
 
-    const device = new Device({
+const device=
+new Device({
 
-      name: req.body.name,
-      usage: req.body.usage,
+email:req.body.email,
 
-    });
+name:req.body.name,
 
-    await device.save();
-
-    res.json({
-      success: true
-    });
-
-  } catch (error) {
-
-    console.log(error);
-
-    res.status(500).json({
-      error: "Failed To Add Device"
-    });
-
-  }
+usage:req.body.usage
 
 });
+
+await device.save();
+
+res.json({
+
+success:true
+
+});
+
+}
+catch(error){
+
+console.log(error);
+
+res.status(500).json({
+
+error:
+"Failed To Add Device"
+
+});
+
+}
+
+}
+);
 
 // DELETE DEVICE
 
-app.delete("/api/devices/:id", async (req, res) => {
+app.delete(
+"/api/devices/:id",
+async(req,res)=>{
 
-  await Device.findByIdAndDelete(
-    req.params.id
-  );
+try{
 
-  res.json({
-    success: true
-  });
+await Device.findByIdAndDelete(
+req.params.id
+);
+
+res.json({
+
+success:true
 
 });
 
-// ======================
-// SERVER
-// ======================
+}
+catch(error){
 
-const PORT =
-process.env.PORT || 5000;
+res.status(500).json(error);
 
-app.listen(PORT, () => {
+}
 
-  console.log(
-    `Server running on ${PORT}`
-  );
+}
+);
+
+const PORT=
+process.env.PORT||5000;
+
+app.listen(PORT,()=>{
+
+console.log(
+`Server running on ${PORT}`
+);
 
 });

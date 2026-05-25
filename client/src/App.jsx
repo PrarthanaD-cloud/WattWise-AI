@@ -113,32 +113,42 @@ useEffect(() => {
   // FETCH DEVICES
   // ======================
 
-  useEffect(() => {
+useEffect(()=>{
 
-    fetchDevices();
+if(loggedIn){
 
-    Notification.requestPermission();
+fetchDevices();
 
-  }, []);
+}
+
+Notification.requestPermission();
+
+},[loggedIn,email]);
 
   const fetchDevices = async () => {
 
-    try {
+  if(!email) return;
 
-      const response =
-        await axios.get(
-"https://wattwise-backend-ut6d.onrender.com/api/devices"
+  try {
+
+    const response =
+      await axios.get(
+
+`https://wattwise-backend-ut6d.onrender.com/api/devices?email=${email}`
+
 );
 
-      setDevices(response.data);
+    setDevices(response.data);
 
-    } catch (error) {
+  }
 
-      console.log(error);
+  catch(error){
 
-    }
+    console.log(error);
 
-  };
+  }
+
+};
   const requestPermission = async () => {
 
   try {
@@ -361,11 +371,19 @@ useEffect(() => {
     try {
 
     await axios.post(
+
 "https://wattwise-backend-ut6d.onrender.com/api/devices",
+
 {
+
+ email,
+
  name: deviceName,
- usage: Number(deviceUsage),
+
+ usage: Number(deviceUsage)
+
 }
+
 );
 
       setDeviceName("");
