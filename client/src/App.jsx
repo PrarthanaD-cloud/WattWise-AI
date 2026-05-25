@@ -1,3 +1,8 @@
+import {
+ signInWithEmailAndPassword
+} from "firebase/auth";
+
+import { auth } from "./firebase";
 import { getToken, onMessage } from "firebase/messaging";
 
 import { messaging } from "./firebase";
@@ -136,7 +141,7 @@ Notification.requestPermission();
 
 `https://wattwise-backend-ut6d.onrender.com/api/devices?email=${email}`
 
-);
+)
 
     setDevices(response.data);
 
@@ -181,24 +186,31 @@ Notification.requestPermission();
   // LOGIN
   // ======================
 
-  const login = () => {
+  const login = async () => {
 
-    if (
-      !email ||
-      !password
-    ) {
+ try{
 
-      alert(
-        "Enter Email & Password"
-      );
+   const userCredential =
+   await signInWithEmailAndPassword(
 
-      return;
+     auth,
+     email,
+     password
 
-    }
+   );
 
-    setLoggedIn(true);
+   setLoggedIn(true);
 
-  };
+ }
+ catch(error){
+
+   alert(
+     "Invalid Email or Password"
+   );
+
+ }
+
+};
 
   // ======================
   // HIGHEST DEVICE
@@ -376,15 +388,15 @@ Notification.requestPermission();
 
 {
 
- email,
+email,
 
- name: deviceName,
+name:deviceName,
 
- usage: Number(deviceUsage)
+usage:Number(deviceUsage)
 
 }
 
-);
+)
 
       setDeviceName("");
 

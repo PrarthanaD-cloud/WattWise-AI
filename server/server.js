@@ -9,139 +9,126 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// DATABASE
-
 mongoose.connect(process.env.MONGO_URI)
-.then(() => {
-  console.log("MongoDB Connected");
-})
-.catch((err)=>{
-  console.log(err);
-});
+.then(()=>{
 
-// MODEL
-
-const DeviceSchema = new mongoose.Schema({
-
-  email:String,
-
-  name:String,
-
-  usage:Number,
+ console.log(
+  "MongoDB Connected"
+ );
 
 });
 
-const Device = mongoose.model(
-  "Device",
-  DeviceSchema
+const DeviceSchema =
+new mongoose.Schema({
+
+ email:String,
+
+ name:String,
+
+ usage:Number
+
+});
+
+const Device =
+mongoose.model(
+ "Device",
+ DeviceSchema
 );
-
-// GET DEVICES
 
 app.get(
 "/api/devices",
 async(req,res)=>{
 
-try{
+ try{
 
-const devices=
-await Device.find({
+ const devices =
+ await Device.find({
 
-email:req.query.email
+ email:
+ req.query.email
 
-});
+ });
 
-res.json(devices);
+ res.json(devices);
 
-}
-catch(error){
+ }
 
-res.status(500).json(error);
+ catch(error){
 
-}
+ res.status(500)
+ .json(error);
+
+ }
 
 }
 );
-
-// ADD DEVICE
 
 app.post(
 "/api/devices",
 async(req,res)=>{
 
-try{
+ try{
 
-const device=
-new Device({
+ const device =
+ new Device({
 
-email:req.body.email,
+ email:
+ req.body.email,
 
-name:req.body.name,
+ name:
+ req.body.name,
 
-usage:req.body.usage
+ usage:
+ req.body.usage
 
-});
+ });
 
-await device.save();
+ await device.save();
 
-res.json({
+ res.json({
 
-success:true
+ success:true
 
-});
+ });
 
-}
-catch(error){
+ }
 
-console.log(error);
+ catch(error){
 
-res.status(500).json({
+ res.status(500)
+ .json(error);
 
-error:
-"Failed To Add Device"
-
-});
-
-}
+ }
 
 }
 );
-
-// DELETE DEVICE
 
 app.delete(
 "/api/devices/:id",
 async(req,res)=>{
 
-try{
+ await Device.findByIdAndDelete(
 
-await Device.findByIdAndDelete(
-req.params.id
-);
+ req.params.id
 
-res.json({
+ );
 
-success:true
+ res.json({
 
-});
+ success:true
 
-}
-catch(error){
-
-res.status(500).json(error);
-
-}
+ });
 
 }
 );
 
-const PORT=
-process.env.PORT||5000;
-
-app.listen(PORT,()=>{
+app.listen(
+5000,
+()=>{
 
 console.log(
-`Server running on ${PORT}`
+"Server Running"
 );
 
-});
+}
+);
